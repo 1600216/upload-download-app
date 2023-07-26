@@ -26,6 +26,9 @@ def index():
         return f'Uploaded: {file.filename}'
     return render_template('index.html')
 
+    el = Upload.query.get(Upload.data).first()
+    return render_template('index.html', el=el)
+
 
 @app.route('/download/<upload_id>')
 def download(upload_id):

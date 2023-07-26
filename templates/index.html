@@ -19,11 +19,16 @@
       </style>
 </head>
 <body>
-    <div class="center">
+    <div>
         <form method="POST" action="/" enctype="multipart/form-data">
             <input type="file" name="file">
             <button>Submit</button>
         </form>
     </div>
+    {% for r in el %}
+    <div class="center">
+        <h4 class="my-0 fw-normal">{{ r.data }}</h4>
+    </div>
+    {% endfor %}
 </body>
 </html>
